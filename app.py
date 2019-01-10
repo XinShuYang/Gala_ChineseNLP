@@ -28,9 +28,9 @@ def text_analysis(text):
     # 第四个参数：词性过滤，为空表示不过滤，若提供则仅返回符合词性要求的关键词
     keywords = jieba.analyse.extract_tags(content, topK=20, withWeight=True, allowPOS=('n'))
     # 访问提取结果
-    for item in keywords:
+    #for item in keywords:
         # 分别为关键词和相应的权重
-        print item[0], item[1]
+        #print item[0], item[1]
 
     # 同样是四个参数，但allowPOS默认为('ns', 'n', 'vn', 'v')
     # 即仅提取地名、名词、动名词、动词
@@ -44,8 +44,8 @@ def text_analysis(text):
 
     for item in keywords:
         # 分别为关键词和相应的权重
-        print count
-        print item[0], item[1]
+        #print count
+        #print item[0], item[1]
 
 
         kw_list.append(item[0])
@@ -54,7 +54,7 @@ def text_analysis(text):
             pytrends.build_payload(kw_list)
             interest_over_time_df = pytrends.interest_over_time()
             interest+='\n |||||||'+str(interest_over_time_df)
-            print interest
+            #print interest
 
             #interest_over_time_df = pytrends.get_historical_interest(kw_list, year_start=2018, month_start=11,day_start=17, hour_start=0,year_end=2018, month_end=11, day_end=24,hour_end=0, cat=0, geo='', gprop='',sleep=0)
 
