@@ -26,7 +26,7 @@ def text_analysis(text):
     # 第二个参数：返回关键词的数量，重要性从高到低排序
     # 第三个参数：是否同时返回每个关键词的权重
     # 第四个参数：词性过滤，为空表示不过滤，若提供则仅返回符合词性要求的关键词
-    keywords = jieba.analyse.extract_tags(content, topK=20, withWeight=True, allowPOS=('n'))
+    keywords = jieba.analyse.extract_tags(content, topK=50, withWeight=True, allowPOS=('n'))
     # 访问提取结果
     #for item in keywords:
         # 分别为关键词和相应的权重
